@@ -17,6 +17,7 @@ router.get('/bridge', function(req, res, next) {
             'User-Agent:Mozilla/5.0 (Windows NT 10.0; WOW64) AppleWebKit/537.36 (KHTML, like Gecko) Chrome/47.0.2526.80 Safari/537.36 Core/1.47.933.400 QQBrowser/9.4.8699.400'
         ).end(function(err, result) {
             if (err) {
+		concole.log("Error getting image:", err);
                 return false;
             }
             res.end(result.body);
